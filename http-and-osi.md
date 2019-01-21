@@ -36,6 +36,7 @@ https://www.webopedia.com/quick_ref/OSI_Layers.asp
   <img src="https://github.com/dnErf/tap-in/blob/master/images/icmp-packet-structure.png"/>
 </p>
 
+> sample image of a packet
 
 ### How HTTP request works
 
