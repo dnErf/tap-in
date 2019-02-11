@@ -11,6 +11,7 @@
 - more efficient and faster to process the simple queries due to indexing
 
 <br />
+
 ---
 
 ##### examples by define
@@ -34,6 +35,8 @@ CREATE TABLE users (
 ?     check if contains
 
 jsonb_set(target,key/index,data,boolean_create_if_missing)
+jsonb_typeof(json_data.value)
+
 
 ```
 
@@ -67,3 +70,11 @@ UPDATE users SET data = data - 'username' || jsonb_build_object('user', data->'u
 CREATE INDEX idx_user on users (data->'username')
 CREATE INDEX idx_user_gin on users USING GIN(body jsonb_path_ops) // all
 ```
+
+<br>
+
+---
+
+<br>
+
+https://www.youtube.com/watch?v=rg_GiOZ5Owk&t=1207s
