@@ -60,7 +60,7 @@
 
 #### figures
 <p>
-  <img src="https://github.com/dnErf/tap-in/blob/master/images/mongodb-sharding-1.jpg"/>
+  <img src="https://github.com/dnErf/tap-in/blob/master/images/mongodb-sharding-0.jpg"/>
 </p>
 
 <br>
