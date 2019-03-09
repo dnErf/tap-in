@@ -47,6 +47,8 @@ https://www.youtube.com/watch?v=hnpzNAPiC0E&list=WL&index=80&t=0s
 </p>
 
 #### Slack ( 2017 )
+https://www.youtube.com/watch?v=WE9c9AZe-DY
+
 - Tech Stack
   - LAMP
   - WebSockets
