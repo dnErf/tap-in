@@ -33,7 +33,9 @@
 #### Terminology in MongoDB
 - Databases
 - Collections
+  - a grouping of documents
 - Documents
+  - basic unit of data
 
 
 #### Replica Sets

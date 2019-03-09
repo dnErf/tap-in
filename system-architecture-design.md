@@ -46,3 +46,16 @@ https://www.youtube.com/watch?v=hnpzNAPiC0E&list=WL&index=80&t=0s
   <img src="https://github.com/dnErf/tap-in/blob/master/images/sad-instagram-3.jpg"/>
 </p>
 
+#### Slack ( 2017 )
+- Tech Stack
+  - LAMP
+  - WebSockets
+  - Redis
+
+<p>
+  <img src="https://github.com/dnErf/tap-in/blob/master/images/sad-slack-1.jpg"/>
+</p>
+
+<p>
+  <img src="https://github.com/dnErf/tap-in/blob/master/images/sad-slack-2.jpg"/>
+</p>
