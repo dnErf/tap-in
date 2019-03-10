@@ -64,6 +64,9 @@ should have a modular monolith code before turning it to a microservice to avoid
 </p>
 
 <br />
+
 ---
+
 https://www.youtube.com/watch?v=5OjqD-ow8GE
+
 https://c4model.com/
