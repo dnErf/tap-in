@@ -61,3 +61,18 @@ https://www.youtube.com/watch?v=WE9c9AZe-DY
 <p>
   <img src="https://github.com/dnErf/tap-in/blob/master/images/sad-slack-2.jpg"/>
 </p>
+
+#### Reddit ( 2018 )
+https://www.youtube.com/watch?v=nUcO7n4hek4&list=WL&index=74&t=0s
+
+- Tech Stack
+  - Postgres
+  - Cassandra
+
+<p>
+  <img src="https://github.com/dnErf/tap-in/blob/master/images/sad-reddit-1.jpg"/>
+</p>
+
+<p>
+  <img src="https://github.com/dnErf/tap-in/blob/master/images/sad-reddit-2.jpg"/>
+</p>
