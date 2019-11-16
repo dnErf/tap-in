@@ -7,26 +7,37 @@ namespace csharp
     static void Main(string[] args)
     {
       // examples 
-      Console.WriteLine(e1(3, 2)); // 5
-      Console.WriteLine(e1(2, 2)); // 12
-      Console.WriteLine(e2(30)); // 21
-      Console.WriteLine(e2(51)); // 0
+      // basic algorithm
+      Console.WriteLine(ba1(3, 2)); // 5
+      Console.WriteLine(ba1(2, 2)); // 12
+      Console.WriteLine(ba2(30)); // 21
+      Console.WriteLine(ba2(51)); // 0
+      Console.WriteLine(ba3(20, 30)); // true
+      Console.WriteLine(ba3(20, 25)); // false
       Console.ReadLine();
     }
-    static int e1(int x, int y)
+    static int ba1(int x, int y)
     {
       // method that compute the sum of the two given integer values.
       // if the two values are the same, then return triple their sum.
       return x == y ? (x + y) * 3 : x + y;
     }
-    static int e2(int n)
+    static int ba2(int n)
     {
+      // method to get the absolute difference between n and 51
+      // if n is greater than 51 return triple tha absolute difference
       const int x = 51;
       if (n > x)
       { 
         return (n - x) * 3;
       }
       return x - n;
+    }
+    static bool ba3(int x, int y)
+    {
+      // method to check two given integers
+      // return true if one of them is 30 or if their sum is 30
+      return x == 30 || y == 30 || (x + y == 30);
     }
   }
 }
