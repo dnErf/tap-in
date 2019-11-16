@@ -1,0 +1,11 @@
+w3r
+-
+tp 8  - jargons
+tp 7  - power of engagement
+tp 6  - modular monoliths
+tp 5  - system architecture and design
+tp 4  - mongodb
+tp 3  - simple mindset to break through
+tp 2  - take in on the GraphQL
+      - postgres and jsonb
+tp 1  - 7 layers of the OSI model

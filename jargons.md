@@ -2,6 +2,8 @@
 
 - algorithm 
   - set of rules and instruction in a process
+- base case
+  - end condition to recursion or iteration
 - big O notation
   - a mathematical notation that describe algorithm complexity
   - relation of the input to a function as it grows and how it changes the runtime (of the function/algorithm)
