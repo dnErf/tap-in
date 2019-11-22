@@ -14,6 +14,8 @@ namespace csharp
       Console.WriteLine(ba2(51)); // 0
       Console.WriteLine(ba3(20, 30)); // true
       Console.WriteLine(ba3(20, 25)); // false
+      Console.WriteLine(ba4(90)); // true
+      Console.WriteLine(ba4(89)); // false
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -38,6 +40,13 @@ namespace csharp
       // method to check two given integers
       // return true if one of them is 30 or if their sum is 30
       return x == 30 || y == 30 || (x + y == 30);
+    }
+    static bool ba4(int x)
+    {
+      // method to check a given integer and return true if it is within 10 of 100 or 200
+      if (Math.Abs(x - 100) <= 10 || Math.Abs(x - 200) <= 10)
+        return true;
+      return false;
     }
   }
 }
