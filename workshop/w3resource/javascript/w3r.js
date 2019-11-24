@@ -1,7 +1,7 @@
 // https://www.w3resource.com/
 
 // 1 method to compare two objects to determine if the first one contains equivalent property values to the second one
-let matches = (obj, source) =>
+const matches = (obj, source) =>
   Object.keys(source).every(key => obj.hasOwnProperty(key) && obj[key] === source[key]);
 
 console.log(matches({ age: 25, hair: 'long', beard: true }, { hair: 'long', beard: true })); // true
@@ -53,3 +53,42 @@ console.log(CSV_to_JSON('col1,col2\na,b\nc,d')); // [{'col1': 'a', 'col2': 'b'},
 console.log(CSV_to_JSON('col1;col2\na;b\nc;d', ';')); // [{'col1': 'a', 'col2': 'b'}, {'col1': 'c', 'col2': 'd'}];
 
 // - 
+
+// 5 method to convert an array of objects to a comma-separated values (CSV) string that contains only the columns specified
+const JSON_TO_CSV = (arr, columns, delimeter = ',') =>
+  [
+    columns.join(delimeter),
+    ...arr.map(obj =>
+      columns.reduce(
+        (acc, key) => `${acc}${!acc.length ? '' : delimeter}"${!obj[key] ? '' : obj[key]}"`,
+        ''
+      )
+    )
+  ].join('\n');
+
+console.log(JSON_to_CSV([{ x: 100, y: 200 }, { y: 7 }], ['x', 'y']));
+/**
+ * x,y
+ * "100","200"
+ * "","7"
+ */
+
+//-
+
+// 6 method to target a given value in a nested JSON object, based on the given key
+const dig = (obj, target) =>
+  target in obj
+    ? obj[target]
+    : Object.values(obj).reduce((acc, val) => {
+      if (acc !== undefined) return acc;
+      if (typeof val === 'object') return dig(val, target);
+    }, undefined);
+
+const dog = {
+  "message": "https://images.dog.ceo/breeds/african/n02116738_1105.jpg",
+  "status": "success",
+}
+
+console.log(dig(dog, 'status')) // success
+
+//-

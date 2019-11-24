@@ -16,6 +16,9 @@ namespace csharp
       Console.WriteLine(ba3(20, 25)); // false
       Console.WriteLine(ba4(90)); // true
       Console.WriteLine(ba4(89)); // false
+      Console.WriteLine(ba5("if else")); // if else
+      Console.WriteLine(ba5("else")); // if else
+      Console.WriteLine(b6("Python", 4)); // Pythn
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -47,6 +50,22 @@ namespace csharp
       if (Math.Abs(x - 100) <= 10 || Math.Abs(x - 200) <= 10)
         return true;
       return false;
+    }
+    static string ba5(string s)
+    {
+      // method to create a new string where 'if' is added to the from of a given string
+      // if the string already begins with 'if', return the string unchanged
+      if (s.Length > 2 && s.Substring(0, 2).Equals("if"))
+      {
+        return s;
+      }
+      return "if " + s;
+    }
+    static string b6(string str, int  n)
+    {
+      // method to remove the character in a given position of a given string
+      // the given position will be in the range 0 ... string length - 1 inclusive
+      return str.Remove(n, 1);
     }
   }
 }
