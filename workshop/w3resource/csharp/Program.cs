@@ -18,7 +18,8 @@ namespace csharp
       Console.WriteLine(ba4(89)); // false
       Console.WriteLine(ba5("if else")); // if else
       Console.WriteLine(ba5("else")); // if else
-      Console.WriteLine(b6("Python", 4)); // Pythn
+      Console.WriteLine(ba6("Python", 4)); // Pythn
+      Console.WriteLine(ba7("abcd"));
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -61,11 +62,17 @@ namespace csharp
       }
       return "if " + s;
     }
-    static string b6(string str, int  n)
+    static string ba6(string str, int  n)
     {
       // method to remove the character in a given position of a given string
       // the given position will be in the range 0 ... string length - 1 inclusive
       return str.Remove(n, 1);
+    }
+    static string ba7(string str)
+    {
+      // method to exchange the first and last characters in a given string and return the new string
+      return str.Length > 1
+        ? str.Substring(str.Length - 1) + str.Substring(1, str.Length - 2) + str.Substring(0, 1) : str;
     }
   }
 }
