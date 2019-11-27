@@ -19,7 +19,9 @@ namespace csharp
       Console.WriteLine(ba5("if else")); // if else
       Console.WriteLine(ba5("else")); // if else
       Console.WriteLine(ba6("Python", 4)); // Pythn
-      Console.WriteLine(ba7("abcd"));
+      Console.WriteLine(ba7("abcd")); // dbca
+      Console.WriteLine(ba8("JS")); // JSJSJSJS
+      Console.WriteLine(ba8("a")); // a
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -73,6 +75,12 @@ namespace csharp
       // method to exchange the first and last characters in a given string and return the new string
       return str.Length > 1
         ? str.Substring(str.Length - 1) + str.Substring(1, str.Length - 2) + str.Substring(0, 1) : str;
+    }
+    static string ba8(string str)
+    {
+      // method that creates a new string which is 5 copies of the 2 front characters of a given string
+      // if the given string length is less than 2 return the original string
+      return str.Length < 2 ? str : str.Substring(0, 2) + str.Substring(0, 2) + str.Substring(0, 2) + str.Substring(0, 2);
     }
   }
 }

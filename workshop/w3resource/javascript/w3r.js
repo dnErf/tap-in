@@ -80,3 +80,20 @@ console.log(dig(dog, 'status')) // success
 // 7 method to converts a specified number to an array of digits
 // convert the number to a string, using the spread operator to build an array
 const digitize = n => [...`${n}`].map(i => parseInt(i));
+
+// -
+
+// 8 method to filter out the specified values from an specified array.
+// return the original array without the filtered values
+const pull = (arr, ...args)  => {
+  let argState = Array.isArray(args[0]) ? args[0] : args;
+  let pulled = arr.filter((v, i) => !argState.includes(v));
+  arr.length = 0;
+  pulled.forEach(v => arr.push(v));
+  return pulled;
+}
+
+let arra1 = ['a', 'b', 'c', 'a', 'b', 'c'];
+console.log(pull(arra1, 'a', 'c')); // ["b", "b"]
+
+// -
