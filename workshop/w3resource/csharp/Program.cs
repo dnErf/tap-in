@@ -23,6 +23,8 @@ namespace csharp
       Console.WriteLine(ba8("JS")); // JSJSJSJS
       Console.WriteLine(ba8("a")); // a
       Console.WriteLine(ba9("Red")); // dRedd
+      Console.WriteLine(ba10(12)); // true
+      Console.WriteLine(ba10(37)); // false
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -88,6 +90,11 @@ namespace csharp
       // method to create a new string with the last char added at the front and back of a given string of length 1 or more
       var s = str.Substring(str.Length - 1);
       return s + str + s;
+    }
+    static bool ba10(int n)
+    {
+      // method to check if a given positive number is a multiple of 3 or a multiple of 7
+      return n % 3 == 0 || n % 7 == 0;
     }
   }
 }

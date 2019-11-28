@@ -1,4 +1,4 @@
-// https://www.w3resource.com/
+// https://www.w3resource.com/javascript-exercises/
 
 // 1 method to compare two objects to determine if the first one contains equivalent property values to the second one
 const matches = (obj, source) =>
@@ -102,5 +102,21 @@ console.log(pull(arra1, 'a', 'c')); // ["b", "b"]
 const powerset = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r))), [[]]);
 
 console.log(powerset([1, 2])); // [[],[1],[2],[2,1]]
+
+// -
+
+// 10 method to extract out the values at the specified indexes from an specified array
+const pull_at_Index = (arr, pullArr) => {
+  let removed = [];
+  let pulled = arr
+    .map((v, i) => (pullArr.includes(i) ? removed.push(v) : v))
+    .filter((v, i) => !pullArr.includes(i));
+  arr.length = 0;
+  pulled.forEach(v => arr.push(v));
+  return removed;
+}
+
+let arra1 = ['a', 'b', 'c', 'd', 'e', 'f'];
+console.log(pull_at_Index(arra1, [1, 3])); // ["b","d"]
 
 // -
