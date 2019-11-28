@@ -22,6 +22,7 @@ namespace csharp
       Console.WriteLine(ba7("abcd")); // dbca
       Console.WriteLine(ba8("JS")); // JSJSJSJS
       Console.WriteLine(ba8("a")); // a
+      Console.WriteLine(ba9("Red")); // dRedd
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -81,6 +82,12 @@ namespace csharp
       // method that creates a new string which is 5 copies of the 2 front characters of a given string
       // if the given string length is less than 2 return the original string
       return str.Length < 2 ? str : str.Substring(0, 2) + str.Substring(0, 2) + str.Substring(0, 2) + str.Substring(0, 2);
+    }
+    static string ba9(string str)
+    {
+      // method to create a new string with the last char added at the front and back of a given string of length 1 or more
+      var s = str.Substring(str.Length - 1);
+      return s + str + s;
     }
   }
 }

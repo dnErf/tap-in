@@ -97,3 +97,10 @@ let arra1 = ['a', 'b', 'c', 'a', 'b', 'c'];
 console.log(pull(arra1, 'a', 'c')); // ["b", "b"]
 
 // -
+
+// 9 method to combine the numbers of a given array into an array containing  all combinations
+const powerset = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r))), [[]]);
+
+console.log(powerset([1, 2])); // [[],[1],[2],[2,1]]
+
+// -
