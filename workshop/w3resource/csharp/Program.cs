@@ -25,6 +25,7 @@ namespace csharp
       Console.WriteLine(ba9("Red")); // dRedd
       Console.WriteLine(ba10(12)); // true
       Console.WriteLine(ba10(37)); // false
+      Console.WriteLine(dtTypeEx1("abc")); // cba
       Console.ReadLine();
     }
     static int ba1(int x, int y)
@@ -95,6 +96,15 @@ namespace csharp
     {
       // method to check if a given positive number is a multiple of 3 or a multiple of 7
       return n % 3 == 0 || n % 7 == 0;
+    }
+    static string dtTypeEx1(string s)
+    {
+      // from https://www.dotnetperls.com/reverse-string
+      // simillar to data type excercise 1
+      // a method that receives a string and returns the string with its letters in reversed
+      char[] arr = s.ToCharArray();
+      Array.Reverse(arr);
+      return new string(arr);
     }
   }
 }

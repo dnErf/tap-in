@@ -3,6 +3,8 @@
 fn main() {
   println!("{}", ba1(2, 2)); // 12
   println!("{}", ba2(51)); // 0
+  println!("{}", ba3(20, 25)); // 0
+  println!("{}", ba3(20, 30)); // 1
 }
 
 // 1 method that computes the sum of the two given integer values
@@ -23,4 +25,10 @@ fn ba2(n:u32) -> u32 {
     return (n - x) * 3
   } 
   return x - n
+}
+
+// 3 method to check 2 given integers
+// return true, if one of them is 30 or if their sum is 30
+fn ba3(x:i32, y:i32) -> bool {
+  return x == 30 || y == 30 || (x + y == 30)
 }
