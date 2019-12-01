@@ -26,7 +26,11 @@ namespace csharp
       Console.WriteLine(ba10(12)); // true
       Console.WriteLine(ba10(37)); // false
       Console.WriteLine(dtTypeEx1("abc")); // cba
+
       Console.ReadLine();
+
+      dtTypeEx2('*');
+
     }
     static int ba1(int x, int y)
     {
@@ -105,6 +109,25 @@ namespace csharp
       char[] arr = s.ToCharArray();
       Array.Reverse(arr);
       return new string(arr);
+    }
+    static void dtTypeEx2(char s)
+    {
+      /* method that takes a character then display a reverse triangle wit the given width
+
+        ***
+        **
+        *
+
+      */
+      int width = 3;
+      int height = width;
+      for (int row = 0; row < height; row++) {
+        for (int column = 0; column < width; column++) {
+          Console.Write(s);
+        }
+        Console.WriteLine();
+        width--;
+      }
     }
   }
 }

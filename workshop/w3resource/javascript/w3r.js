@@ -121,8 +121,18 @@ console.log(pull_at_Index(arra1, [1, 3])); // ["b","d"]
 
 // -
 
-// 11 method  to generate a random hexadecimal color code
+// 11 method to generate a random hexadecimal color code
 const random_hex_color_code = () => {
   let n = (Math.random() * 0xfffff * 1000000).toString(16);
   return '#' + n.slice(0, 6);
 }
+
+// -
+
+// 12 method to remove non-printable ASCII characters from  a  given string
+const remove_non_ASCII = str = str.replace(/[^\x20-\x7E]/g, '');
+
+console.log(remove_non_ASCII('äÄçÇéÉêw3resouröceÖÐþúÚ')); // w3resource
+
+// - 
+

@@ -32,3 +32,11 @@ fn ba2(n:u32) -> u32 {
 fn ba3(x:i32, y:i32) -> bool {
   return x == 30 || y == 30 || (x + y == 30)
 }
+
+// 4 method to check a given integer if it is within 10 of 100 or 200
+fn ba4(x:i32) -> i32 {
+  if i32::abs(x - 100) <= 10 || i32::abs(x - 200) <= 10 {
+    return 1
+  }
+  return 0
+}
