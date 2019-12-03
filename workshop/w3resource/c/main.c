@@ -8,6 +8,8 @@ main(void) {
   printf("%d", ba2(51)); // 0
   printf("%d", ba3(20, 25)); // 0
   printf("%d", ba3(20, 30)); // 1
+  printf("%d", ba4(90)); // 1 
+  printf("%d", ba4(89)); // 0
 }
 
 // 1 method that computes the sum of the two given integer values

@@ -1,0 +1,16 @@
+[package]
+name = "guess"
+version = "0.1.0"
+authors = ["dnErf <frend.fernando@live.com>"]
+edition = "2018"
+
+[profile.release]
+lto = true
+panic = 'abort'
+opt-level = 'z'
+codegen-units = 1
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.4.0"

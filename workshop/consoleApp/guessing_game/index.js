@@ -1,12 +1,25 @@
-const readline = require('readline');
+// const readline = require('readline'); native prompt is hard to use
 
-let rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-console.log('Guess the number!');
-rl.question('Please input your guess ', (guess) => {
-  console.log('You guessed: ', guess);
-  rl.close();
-});
+const prompts = require('prompts');
+ 
+(async () => {
+  console.log('Guess the number!');
+  let secret_number = Math.floor(Math.random() * 101);
+  console.log('The secret number is ' + secret_number);
+  loop:
+  while (true) {
+    let { guess } = await prompts({
+      type: 'number',
+      name: 'guess',
+      message: 'Please input your guess'
+    });
+    switch (true) {
+      case (guess < secret_number) : console.log('too small!'); break;
+      case (guess > secret_number) : console.log('too big!'); break;
+      case (guess === secret_number) :
+      default:
+        console.log('nice, you win!');
+        break loop;
+    }
+  }
+})();
