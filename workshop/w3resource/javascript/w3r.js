@@ -136,3 +136,11 @@ console.log(remove_non_ASCII('äÄçÇéÉêw3resouröceÖÐþúÚ')); // w3reso
 
 // - 
 
+// 13 method to convert the length of a given string in bytes
+const byte_Size = str =>  new Blob([str]).size;
+
+console.log(byte_Size('123456')); // 6 
+console.log(byte_Size('Ã¢')); // 4
+
+// -
+

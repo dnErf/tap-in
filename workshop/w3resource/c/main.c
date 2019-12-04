@@ -10,6 +10,8 @@ main(void) {
   printf("%d", ba3(20, 30)); // 1
   printf("%d", ba4(90)); // 1 
   printf("%d", ba4(89)); // 0
+  printf("%d", ba5(12)); // 1
+  printf("%d", ba5(37)); // 0
 }
 
 // 1 method that computes the sum of the two given integer values
@@ -39,4 +41,9 @@ int ba4(int x) {
   if (abs(x - 100) <= || abs(x - 200) <= 10)
     return 1;
   return 0;
+}
+
+// 5 method to check if a given positive number is a multiple of 3 or a multiple of 7.
+int ba5(n) {
+  return n % 3 == 0 || n % 7 == 0;
 }
