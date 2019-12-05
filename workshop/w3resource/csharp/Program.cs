@@ -30,6 +30,7 @@ namespace csharp
       Console.ReadLine();
 
       dtTypeEx2('*');
+      dtTypeEx3();
 
     }
     static int ba1(int x, int y)
@@ -127,6 +128,40 @@ namespace csharp
         }
         Console.WriteLine();
         width--;
+      }
+    }
+    static void dtTypeEx3()
+    {
+      // method that takes userid and passowrd as input
+      // after 3 wrong attempts, user will be rejected
+      string username, password;
+      int ctr = 0, dd = 0;
+      Console.Write("check username and password");
+      Console.Write("\ndefault username and password is : username and password");
+      do {
+        Console.Write("input a username");
+        username = Console.ReadLine();
+        Console.Write("input a password");
+        password = Console.ReadLine();
+        if (username == "username" && password == "password")
+        {
+          dd = 1;
+          ctr = 3;
+        } else {
+          dd = 0;
+          ctr++;
+        }
+      } while (
+        (username != "username" || password != "password") 
+        && (ctr != 3)
+      ); 
+      if (dd == 0)
+      {
+        Console.Write("\nlogin attemp more than three times. lry again later");
+      }
+      if (dd == 1)
+      {
+        Console.Write("\npassword entered successfully");
       }
     }
   }
