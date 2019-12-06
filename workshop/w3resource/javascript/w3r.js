@@ -144,3 +144,17 @@ console.log(byte_Size('Ã¢')); // 4
 
 // -
 
+// 14 replace the names of multiple object keys with the values provided
+const rename_keys = (keysMap, obj) =>
+  Object.keys(obj).reduce(
+    (acc, key) => ({
+      ...acc,
+      ...{ [keysMap[key] || key]: obj[key] }
+    }),
+    {}
+  );
+let obj = { name: 'Bob', job: 'Programmer', shoeSize: 100 }
+let result = rename_keys({ name: 'firstName', job: 'Actor' }, obj);
+console.log(result); // { firstName: 'Bob', Actor: 'Programmer', shoeSize: 100 }
+// -
+
