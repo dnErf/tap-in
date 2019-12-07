@@ -12,6 +12,8 @@ main(void) {
   printf("%d", ba4(89)); // 0
   printf("%d", ba5(12)); // 1
   printf("%d", ba5(37)); // 0
+  printf("%d", ba6(2, 120)); // 0
+  printf("%d", ba6(-1, 120)); // 1
 }
 
 // 1 method that computes the sum of the two given integer values
@@ -46,4 +48,10 @@ int ba4(int x) {
 // 5 method to check if a given positive number is a multiple of 3 or a multiple of 7.
 int ba5(n) {
   return n % 3 == 0 || n % 7 == 0;
+}
+
+// 6 method to check if one given temperatures is less than 0 and the other is greater than 100
+int ba6(int temp1, int temp2)
+{
+  return temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100;
 }

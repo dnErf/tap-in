@@ -3,12 +3,14 @@
 fn main() {
   println!("{}", ba1(2, 2)); // 12
   println!("{}", ba2(51)); // 0
-  println!("{}", ba3(20, 25)); // 0
-  println!("{}", ba3(20, 30)); // 1
-  println!("{}", ba4(90)); // 1 
-  println!("{}", ba4(89)); // 0
+  println!("{}", ba3(20, 25)); // false
+  println!("{}", ba3(20, 30)); // true
+  println!("{}", ba4(90)); // true
+  println!("{}", ba4(89)); // false
   println!("{}", ba5(12)) // true
   println!("{}", ba5(37)) // false
+  println!("{}", ba6(2, 120)); // false
+  println!("{}", ba6(-1, 120)); // true
 }
 
 // 1 method that computes the sum of the two given integer values
@@ -48,4 +50,9 @@ fn ba4(x:i32) -> i32 {
 // 5 method to check if a given positive number is a multiple of 3 or a multiple of 7.
 fn ba5(n:u32) -> bool {
   (n % 3) == 0 || (n % 7) == 0
+}
+
+// 6 method to check if one given temperatures is less than 0 and the other is greater than 100
+fn ba6(temp1:i32, temp2:i32) -> bool {
+  (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100)
 }
