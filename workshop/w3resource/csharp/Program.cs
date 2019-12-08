@@ -31,6 +31,7 @@ namespace csharp
 
       dtTypeEx2('*');
       dtTypeEx3();
+      dtTypeE4();
 
     }
     static int ba1(int x, int y)
@@ -163,6 +164,28 @@ namespace csharp
       {
         Console.Write("\npassword entered successfully");
       }
+    }
+    static void dtTypeE4()
+    {
+      // program that takes two numbers as input and perform  an operation(+,-,*,/) on them and displays the result of that operation
+      int  x, y;
+      char operation;
+      Console.Write("input first number : ");
+      x = Convert.ToInt32(Console.ReadLine());
+      Console.Write("input operation: ");
+      operation = Convert.ToChar(Console.ReadLine());
+      Console.Write("input second number: ");
+      y = Convert.ToInt32(Console.ReadLine());
+      if (operation == '+')
+        Console.WriteLine("{0} + {1} = {2}", x, y, x + y);
+      else if (operation == '-')
+        Console.WriteLine("{0} - {1} = {2}", x, y, x - y);
+      else if ((operation == 'x') || (operation == '*'))
+        Console.WriteLine("{0} * {1} = {2}", x, y, x * y);
+      else if (operation == '/')
+        Console.WriteLine("{0} * {1} = {2}", x, y, x * y);
+      else
+        Console.WriteLine("wrong character");
     }
   }
 }
