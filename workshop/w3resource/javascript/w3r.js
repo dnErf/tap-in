@@ -158,3 +158,26 @@ let result = rename_keys({ name: 'firstName', job: 'Actor' }, obj);
 console.log(result); // { firstName: 'Bob', Actor: 'Programmer', shoeSize: 100 }
 // -
 
+// 15 method that returns the minimum-maximum value of an array
+// after applying the provided function to set compairing rule
+
+const reduce_Which = (arr, comparator = (a, b) => a - b)
+  => arr.reduce((a, b) => (comparator(a, b) >= 0 ? b : a ));
+
+  console.log(reduce_Which( // {"name":"Kevin","age":16}
+    [{ name: 'Kevin', age: 16 }, { name: 'John', age: 20 }, { name: 'Ani', age: 19 }],
+    (a, b) => a.age - b.age)
+  );
+
+// ---
+
+// 17 method to return true if the provided predicate function
+// returns true for all elements in a collection, false otherwise
+
+const all = (arr, fn = Boolean) => arr.every(fn);
+
+console.log(all([4, 2, 3], x => x < 1)); // false
+console.log(all([1, 2, 3])); // true
+
+// ---
+
