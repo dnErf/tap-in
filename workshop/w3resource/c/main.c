@@ -14,6 +14,8 @@ main(void) {
   printf("%d", ba5(37)); // 0
   printf("%d", ba6(2, 120)); // 0
   printf("%d", ba6(-1, 120)); // 1
+  printf("%d", ba7(100, 199)); // 1
+  printf("%d", ba7(250, 300)); // 0
 }
 
 // 1 method that computes the sum of the two given integer values
@@ -54,4 +56,10 @@ int ba5(n) {
 int ba6(int temp1, int temp2)
 {
   return temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100;
+}
+
+// 7 method to check 2 given integers whether either of them is in the range 100..200 inclusive
+int ba7(int x, int y)
+{
+  return (x >= 100 && x <= 200) || (y >= 100 && y <= 200);
 }

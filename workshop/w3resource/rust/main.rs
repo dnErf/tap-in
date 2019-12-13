@@ -11,6 +11,8 @@ fn main() {
   println!("{}", ba5(37)) // false
   println!("{}", ba6(2, 120)); // false
   println!("{}", ba6(-1, 120)); // true
+  println!("{}", ba7(100, 199)); // true
+  println!("{}", ba7(250, 300)); // false
 }
 
 // 1 method that computes the sum of the two given integer values
@@ -55,4 +57,9 @@ fn ba5(n:u32) -> bool {
 // 6 method to check if one given temperatures is less than 0 and the other is greater than 100
 fn ba6(temp1:i32, temp2:i32) -> bool {
   (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100)
+}
+
+// 7 method to check 2 given integers whether either of them is in the range 100..200 inclusive
+fn ba7(x:i32, y:i32) -> bool {
+  (x >= 100 && x <= 200) || (y >= 100 && y <= 200);
 }
