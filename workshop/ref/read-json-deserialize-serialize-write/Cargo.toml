@@ -1,0 +1,18 @@
+[package]
+name = "aoc"
+version = "0.1.0"
+authors = ["dnErf <frend.fernando@live.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true
+panic = 'abort'
+opt-level = 'z'
+codegen-units = 1
+
+[dependencies]
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
