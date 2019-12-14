@@ -3,21 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h> //
 
-main(void) {
-  printf("%d", ba1(2,2)); // 12
-  printf("%d", ba2(51)); // 0
-  printf("%d", ba3(20, 25)); // 0
-  printf("%d", ba3(20, 30)); // 1
-  printf("%d", ba4(90)); // 1 
-  printf("%d", ba4(89)); // 0
-  printf("%d", ba5(12)); // 1
-  printf("%d", ba5(37)); // 0
-  printf("%d", ba6(2, 120)); // 0
-  printf("%d", ba6(-1, 120)); // 1
-  printf("%d", ba7(100, 199)); // 1
-  printf("%d", ba7(250, 300)); // 0
-}
-
 // 1 method that computes the sum of the two given integer values
 // if the two values are the same, then return triple their sum
 int ba1(int x, int y) {
@@ -62,4 +47,31 @@ int ba6(int temp1, int temp2)
 int ba7(int x, int y)
 {
   return (x >= 100 && x <= 200) || (y >= 100 && y <= 200);
+}
+
+// 10 method to check  which number nearest to the value 100 among two given integers
+// return 0 if the two numbers are equal
+int ba10(int x, int y)
+{
+  int n = 100
+  int v1 = abs(x - n);
+  int v2 = abs(y - n);
+  return v1 == v2 ? 0 : (v1 < v2 ? x : y);
+}
+
+main(void) {
+  printf("%d", ba1(2,2)); // 12
+  printf("%d", ba2(51)); // 0
+  printf("%d", ba3(20, 25)); // 0
+  printf("%d", ba3(20, 30)); // 1
+  printf("%d", ba4(90)); // 1 
+  printf("%d", ba4(89)); // 0
+  printf("%d", ba5(12)); // 1
+  printf("%d", ba5(37)); // 0
+  printf("%d", ba6(2, 120)); // 0
+  printf("%d", ba6(-1, 120)); // 1
+  printf("%d", ba7(100, 199)); // 1
+  printf("%d", ba7(250, 300)); // 0
+  printf("%d", ba10(95, 95)); // 0
+  printf("%d", ba10(99, 70)); // 99
 }

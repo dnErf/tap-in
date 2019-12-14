@@ -1,20 +1,5 @@
 // copy from c exercise
 
-fn main() {
-  println!("{}", ba1(2, 2)); // 12
-  println!("{}", ba2(51)); // 0
-  println!("{}", ba3(20, 25)); // false
-  println!("{}", ba3(20, 30)); // true
-  println!("{}", ba4(90)); // true
-  println!("{}", ba4(89)); // false
-  println!("{}", ba5(12)) // true
-  println!("{}", ba5(37)) // false
-  println!("{}", ba6(2, 120)); // false
-  println!("{}", ba6(-1, 120)); // true
-  println!("{}", ba7(100, 199)); // true
-  println!("{}", ba7(250, 300)); // false
-}
-
 // 1 method that computes the sum of the two given integer values
 // if the two values are the same, then return triple their sum
 fn ba1(x:i32, y:i32) -> i32 {
@@ -62,4 +47,38 @@ fn ba6(temp1:i32, temp2:i32) -> bool {
 // 7 method to check 2 given integers whether either of them is in the range 100..200 inclusive
 fn ba7(x:i32, y:i32) -> bool {
   (x >= 100 && x <= 200) || (y >= 100 && y <= 200);
+}
+
+// 10 method to check  which number nearest to the value 100 among two given integers
+// return 0 if the two numbers are equal
+fn ba10(x:i32, y:i32) -> i32 {
+  let n = 100;
+  let v1 = i32::abs(x - y);
+  let v2 = i32::abs(y - n);
+  if v1 == v2 
+    { return 0; } 
+  else
+  {
+    if v1 < v2 
+      { return x; }
+    else
+      { return y; }
+  }
+}
+
+fn main() {
+  println!("{}", ba1(2, 2)); // 12
+  println!("{}", ba2(51)); // 0
+  println!("{}", ba3(20, 25)); // false
+  println!("{}", ba3(20, 30)); // true
+  println!("{}", ba4(90)); // true
+  println!("{}", ba4(89)); // false
+  println!("{}", ba5(12)) // true
+  println!("{}", ba5(37)) // false
+  println!("{}", ba6(2, 120)); // false
+  println!("{}", ba6(-1, 120)); // true
+  println!("{}", ba7(100, 199)); // true
+  println!("{}", ba7(250, 300)); // false
+  println!("{}", ba10(95, 95)); // 0
+  println!("{}", ba10(99, 70)); // 99
 }
