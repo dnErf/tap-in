@@ -59,6 +59,12 @@ int ba10(int x, int y)
   return v1 == v2 ? 0 : (v1 < v2 ? x : y);
 }
 
+// 13 method to check if two given non-negative integers have the same last digit
+int ba13(int x, int y)
+{
+  return abs(x % 10) == abs(y % 10);
+}
+
 main(void) {
   printf("%d", ba1(2,2)); // 12
   printf("%d", ba2(51)); // 0
@@ -74,4 +80,6 @@ main(void) {
   printf("%d", ba7(250, 300)); // 0
   printf("%d", ba10(95, 95)); // 0
   printf("%d", ba10(99, 70)); // 99
+  printf("%d", ba13(123, 456)); // 0
+  printf("%d", ba13(12, 512)); // 1
 }

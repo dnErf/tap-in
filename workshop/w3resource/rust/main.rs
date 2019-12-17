@@ -66,6 +66,11 @@ fn ba10(x:i32, y:i32) -> i32 {
   }
 }
 
+// 13 method to check if two given non-negative integers have the same last digit
+fn ba13(x:i32, y:i32) -> bool {
+  i32::abs(x % 10) == i32::(y % 10);
+}
+
 fn main() {
   println!("{}", ba1(2, 2)); // 12
   println!("{}", ba2(51)); // 0
