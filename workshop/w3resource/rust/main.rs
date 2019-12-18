@@ -71,6 +71,20 @@ fn ba13(x:i32, y:i32) -> bool {
   i32::abs(x % 10) == i32::(y % 10);
 }
 
+// 14 method to check whether the sequence of numbers 1,2,3 appears in a given array of integers
+// this uses std::mem::size_of
+fn ba14(nums:Vec<i32>, &mut arr_size:i32) -> i16 {
+  let mut i:i16 = 1;
+  while i < arr_size {
+    if (nums[i] == 1 && num[i + 1] == 2 && nums[i + 2] == 3) {
+      return 1;
+    } else {
+      return 0;
+    }
+    i += 1;
+  }
+}
+
 fn main() {
   println!("{}", ba1(2, 2)); // 12
   println!("{}", ba2(51)); // 0
@@ -86,4 +100,13 @@ fn main() {
   println!("{}", ba7(250, 300)); // false
   println!("{}", ba10(95, 95)); // 0
   println!("{}", ba10(99, 70)); // 99
+  println!("{}", ba13(123, 456)); // 0
+  println!("{}", ba13(12, 512)); // 99
+  // ---
+  // ba14
+  let mut arr_size:i32;
+  let arr1 = vec![1,1,2,3,1];
+  arr_size = size_of(arr1.len()) / size_of(arr1[0]);
+  println!("{}", ba14(arr1, arr_size));
+  // ---
 }

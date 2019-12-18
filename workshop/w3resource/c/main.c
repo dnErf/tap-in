@@ -65,6 +65,17 @@ int ba13(int x, int y)
   return abs(x % 10) == abs(y % 10);
 }
 
+// 14 method to check whether the sequence of numbers 1,2,3 appears in a given array of integers
+int ba14(int nums[], int arr_size)
+{
+  for (int i = 0; i  < arr_size - 1; i++)
+  {
+    if (nums[i] && nums[i + 1] == 2 && nums[i + 2] == 3)
+      return 1;
+  }
+  return 0;
+}
+
 main(void) {
   printf("%d", ba1(2,2)); // 12
   printf("%d", ba2(51)); // 0
@@ -82,4 +93,11 @@ main(void) {
   printf("%d", ba10(99, 70)); // 99
   printf("%d", ba13(123, 456)); // 0
   printf("%d", ba13(12, 512)); // 1
+  // -
+  // ba14
+  int arr_size;
+  int arr1[] = {1,1,2,3,1};
+  arr_size = sizeof(arr1)/sizeof(arr1[0]);
+  printf("%d", ba14(arr1, arr_size)); // 1
+  // -
 }
