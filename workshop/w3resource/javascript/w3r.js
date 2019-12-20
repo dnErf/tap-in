@@ -181,3 +181,23 @@ console.log(all([1, 2, 3])); // true
 
 // ---
 
+// 18 method to remove specified elements from the left of a given array of elements
+const remove_from_left = (arr, n = 1) => {
+  return arr.slice(n);
+}
+
+console.log(remove_from_left([1, 2, 3], 1)); // [2,3]
+console.log(remove_from_left([1, 2, 3], 2)); // [3]
+
+// ---
+
+// 19 method to remove specified elements from the right of a given array of elements
+const remove_from_right = (arr, n = -1) => {
+  return arr.slice(n);
+}
+
+console.log(remove_from_right([1, 2, 3])); // [3]
+console.log(remove_from_right([1, 2, 3], -2)); // [2,3]
+
+// ---
+
