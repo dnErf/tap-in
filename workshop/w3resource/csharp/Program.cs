@@ -32,6 +32,7 @@ namespace csharp
       dtTypeEx2('*');
       dtTypeEx3();
       dtTypeE4();
+      dtTypeE5();
 
     }
     static int ba1(int x, int y)
@@ -186,6 +187,17 @@ namespace csharp
         Console.WriteLine("{0} * {1} = {2}", x, y, x * y);
       else
         Console.WriteLine("wrong character");
+    }
+    static void dtTypeE5()
+    {
+      // method that takes the radius of a circle as input and calculate the perimeter and area of the circle
+      double r, per_cir;
+      double PI = 3.14;
+      Console.WriteLine("Input the radius of the circle : ");
+      r = Convert.ToDouble(Console.ReadLine());
+      per_cir = 2  * PI *  r;
+      Console.WriteLine("Perimeter of Circle : {0}", per_cir);
+      Console.Read();
     }
   }
 }
