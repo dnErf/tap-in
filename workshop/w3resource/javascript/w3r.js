@@ -201,3 +201,23 @@ console.log(remove_from_right([1, 2, 3], -2)); // [2,3]
 
 // ---
 
+// 20 method to extend a  3 - digit color code to a 6 - digit color code
+const extend_hex = shortHex =>  
+  '#' + shortHex
+    .slice(shortHex.startsWith('#') ? 1 : 0)
+    .split('')
+    .map(x => x + x)
+    .join('');
+
+console.log(extend_hex('#03f')); // #0033ff
+console.log(extend_hex('05a')); // #0055aa
+
+// ---
+
+// 21 method to get every nth element in a given array
+const every_nth = (arr,  nth) => arr.filter((e, i) => i % nth === nth - 1);
+
+console.log(every_nth([1, 2, 3, 4, 5, 6], 3)); // [3,6]
+console.log(every_nth([1, 2, 3, 4, 5, 6], 2)); // [2,4,6]
+
+// ---
